@@ -1,9 +1,10 @@
 import React from "react";
+import Card from "./Components/Card/Card";
 
 function App() {
   return (
     <>
-      <div className="App">
+      {/* <div className="App">
         <h1 className="text-4xl font-bold bg-red-100">Hello world!</h1>
       </div>
 
@@ -17,7 +18,16 @@ function App() {
         <div className="flex justify-center items-center bg-green-500 w-16 h-16 text-white font-bold underline rounded-2xl">
           3
         </div>
-      </div>
+      </div> */}
+      <Card />
+      <Card
+        price="30"
+        text="Replay muška majica kratkih rukava. Okrugli izrez. Pamuk. Teget boja."
+        images={
+          "https://www.n-sport.net/UserFiles/products/big/09/12/muska-majica-replay-316522832P-098.jpg"
+        }
+        title={"Replay Maica"}
+      />
     </>
   );
 }
