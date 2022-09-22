@@ -19,15 +19,24 @@ function App() {
           3
         </div>
       </div> */}
-      <Card />
-      <Card
-        price="30"
-        text="Replay muška majica kratkih rukava. Okrugli izrez. Pamuk. Teget boja."
-        images={
-          "https://www.n-sport.net/UserFiles/products/big/09/12/muska-majica-replay-316522832P-098.jpg"
-        }
-        title={"Replay Maica"}
-      />
+      <div className="flex justify-center items-center">
+        <Card
+          price="30"
+          text="Replay muška majica kratkih rukava. Okrugli izrez. Pamuk. Teget boja."
+          images={
+            "https://www.n-sport.net/UserFiles/products/big/09/12/muska-majica-replay-316522832P-098.jpg"
+          }
+          title={"Replay Maica"}
+        />
+        <Card
+          price="40"
+          text="Replay muška majica kratkih rukava. Okrugli izrez. Pamuk. Teget boja."
+          images={
+            "https://img.ep-cdn.com/images/500/500/kg/kgkupgqfiytzjsnldglr.jpg"
+          }
+          title={"Replay Maica"}
+        />
+      </div>
     </>
   );
 }
