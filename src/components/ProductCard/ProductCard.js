@@ -9,11 +9,7 @@ export default function ProductCard({ image, title, price, text, onClick }) {
         <h2 className="font-bold text-lg ml-10"> {title} </h2>
         <p className="text text-gray-600 text-center ">{text}</p>
         <div className="m-2"></div>
-        {/* <span className="flex items-center ml-23  mt-4 ">
-          <img src={image} className="h-3 px-1 "></img>
-          <img src={image} className="h-3 px-1"></img>
-          <img src={image} className="h-3 px-1"></img>
-        </span> */}
+
         <div className="flex justify-between">
           <button
             onClick={onClick}
