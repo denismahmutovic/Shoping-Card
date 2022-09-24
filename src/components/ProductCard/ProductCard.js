@@ -13,7 +13,7 @@ export default function ProductCard({ image, title, price, text, onClick }) {
         <div className="flex justify-between">
           <button
             onClick={onClick}
-            className="bg-green-400 px-4 py-1 h-30 w-30 hover:bg-violet-600 text-white rounded mt-3 ml-1 "
+            className="bg-green-400 px-4 py-1 h-30 w-30 ease-in duration-300 hover:bg-violet-600 text-white rounded mt-3 ml-1 "
           >
             Add to cart
           </button>
