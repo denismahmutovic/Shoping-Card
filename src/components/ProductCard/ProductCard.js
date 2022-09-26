@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProductCard({ image, title, price, text, onClick }) {
   return (
-    <div className="bg-gray-100 w-full min-h-screen gap-4 flex-wrap flex justify-center items-center">
+    <div className="bg-gray-200 w-full min-h-screen gap-4 flex-wrap flex justify-center items-center">
       <div className="w-60 px-6 bg-white rounded py-6 transform transition-all hover:translate-y-2">
         <img className="h-50 object-cover " src={image} alt="Product" />
         <div className="p-2"></div>
