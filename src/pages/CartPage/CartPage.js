@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
-import ProductCard from "../../components/ProductCard/ProductCard";
 
 export default function CartPage() {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
@@ -34,22 +33,21 @@ export default function CartPage() {
           </button>
         </div>
       ) : (
-        <div className="flex flex-col justify-center items-center h-30 ">
+        <div className="flex flex-col justify-center items-center h-30 w-full px-48">
           {cartItems.map((product) => (
             <div
               key={product.id}
-              className="flex mx-3 my-4  rounde justify-between items-center  w-2/3"
+              className="flex mx-3 my-4 rounded justify-between items-center w-full"
             >
               <img src={product.imgUrl} alt="nesto" width={150} height={20} />
-              <div className="flex-col ml-8 justify-center">
-                <h2 className="font-bold w-1/1">{product.name}</h2>
-                <p>{product.name}</p>
+              <div className="flex-col ml-8 justify-center w-32">
+                <h2 className="font-bold">{product.name}</h2>
               </div>
-              <div className="mx-10 flex justify-center my-3">
-                <p className="text-bold w-1/2 ">{product.price} $</p>
+              <div className="flex justify-center items-center my-3 w-64">
+                <p className="text-bold">{product.price} $</p>
                 <button
                   onClick={() => decreaseQuantity(product.id)}
-                  className="rounded border-2 w-10 border-stone-200 h-1/2 px-1 text-center mx-3"
+                  className="rounded border-2 w-10  border-red-500   h-1/2 px-1 text-center mx-3"
                 >
                   -
                 </button>
@@ -61,37 +59,42 @@ export default function CartPage() {
                   +
                 </button>
               </div>
-              <div className="mx-12 flex justify-center  items-center ">
+              <div className="flex justify-center  items-center  ">
                 <p className="text-bold">One piece: {product.price} </p>
               </div>
-              <div className="mx-10 flex justify-center my-10 items-center">
+              <div className="flex justify-center my-10 items-center">
                 Total Amout: {product.price * product.quantity} $
               </div>
 
-              {/* <button onClick={() => removeFromCart(product.id)}></button> */}
-              <svg
-                className="flex justify-center items-center "
-                onClick={() => removeFromCart(product.id)}
-                class="h-8 w-8 text-red-500"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                {" "}
-                <circle cx="12" cy="12" r="10" />{" "}
-                <line x1="15" y1="9" x2="9" y2="15" />{" "}
-                <line x1="9" y1="9" x2="15" y2="15" />
-              </svg>
+              <button onClick={() => removeFromCart(product.id)}>
+                <svg
+                  className="flex justify-center items-center "
+                  class="h-8 w-8 text-red-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  {" "}
+                  <circle cx="12" cy="12" r="10" />{" "}
+                  <line x1="15" y1="9" x2="9" y2="15" />{" "}
+                  <line x1="9" y1="9" x2="15" y2="15" />
+                </svg>
+              </button>
             </div>
           ))}
-          <div className="bg-gray-200 w-3/4 h-20 flex">
+          <div
+            className="bg-gray-200 w-full h-20 flex
+          px-1 rounded-lg mt-4 ml-1 justify-center  items-center "
+          >
             <div>
-              <h3>POSEDUJETE PROMO KUPON?</h3>
+              <h3 className="rounded mt-3 ml-1">DO YOU HAVE A PROMO COUPON?</h3>
+            </div>
+            <div>
               <svg
-                class="h-8 w-8 text-red-500"
+                className="h-8 w-8 text-red-500 mt-3 ml-1 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -107,10 +110,16 @@ export default function CartPage() {
             <div>
               {" "}
               <input
-                placeholder="hello"
+                placeholder="Coupon Code"
                 type={"text"}
-                className="default:ring-2"
+                className="w-64 bg-white h-8 text-center ml-3 "
               ></input>{" "}
+              <button className="bg-red-400 px-4 py-1 h-30 w-30 hover:bg-violet-600 text-white rounded  ">
+                Apply Coupon
+              </button>
+            </div>
+            <div className="rounded mt-3 ml-20 text-xl font-serif">
+              Total: ${totalPrice}
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { createContext, useState } from "react";
 import { toast } from "react-hot-toast";
-import NavBar from "../components/Navbar/Navbar";
 
 // create context
 const ShoppingCartContext = createContext();
@@ -46,7 +45,7 @@ const ShoppingCartContextProvider = ({ children }) => {
 
   const decreaseQuantity = (id) => {
     setCartItems((prevItems) => {
-      if (prevItems.find((el) => el.quantity === 1)) {
+      if (prevItems.find((el) => el.id === id).quantity === 1) {
         removeFromCart(id);
       }
       return prevItems.map((item) => {
