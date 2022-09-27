@@ -44,7 +44,7 @@ const NavBar = () => {
 
               {cartItems.length > 0 && (
                 <div class="inline-flex absolute -top-1 -right-1 justify-center items-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full border-2 border-white dark:border-gray-900">
-                  <span className="mx-auto -mt-1">{itemsInCart}</span>
+                  <span className="mx-auto -mt-1çç">{itemsInCart}</span>
                 </div>
               )}
             </div>
