@@ -15,7 +15,7 @@ export default function HomePage() {
         />
       </div>
 
-      <div className="flex">
+      <div className="h-full w-full flex flex-wrap flex-row bg-gray-100">
         {products.map((product) => (
           <ProductCard
             key={product.id}
