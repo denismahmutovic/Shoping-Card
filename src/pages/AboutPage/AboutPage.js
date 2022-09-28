@@ -1,7 +1,7 @@
 import React from "react";
 const About = () => {
   return (
-    <div className="flex-col flex justify-center items-center  ">
+    <div className="flex-col flex justify-center items-center mt-20  ">
       <h1 className="text-3xl">About</h1>
       <p>This project was built to learn the use of Context API and React.</p>
       <br />

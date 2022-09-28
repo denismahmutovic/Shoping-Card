@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import products from "../../common/items.json";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
-import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
   const { addToCart } = useContext(ShoppingCartContext);
@@ -16,7 +15,7 @@ export default function HomePage() {
         />
       </div>
 
-      <div className="h-full w-full flex flex-wrap flex-row bg-gray-100">
+      <div className="h-3/2 w-full flex flex-wrap flex-row bg-gray-100">
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -27,7 +26,6 @@ export default function HomePage() {
           />
         ))}
       </div>
-      <Footer />
     </>
   );
 }

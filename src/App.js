@@ -9,12 +9,15 @@ function App() {
   return (
     <div>
       <NavBar />
+      <main className="relative z-10" style={{ "min-height": "calc(71vh)" }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </main>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/cart" element={<CartPage />} />
-      </Routes>
+      <Footer />
     </div>
   );
 }

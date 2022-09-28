@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
 
 export default function CartPage() {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
@@ -125,7 +124,6 @@ export default function CartPage() {
           </div>
         </div>
       )}
-      <Footer />
     </>
   );
 }
