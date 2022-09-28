@@ -47,5 +47,19 @@
     "price": 5.89,
     "imgUrl": "https://istyle.rs/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/m/l/mlwj3.jpeg",
     "currency": "EUR"
+  },
+  {
+    "id": 8,
+    "name": "iPad Pro M1 12,9",
+    "price": 5.89,
+    "imgUrl": "https://istyle.rs/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/m/h/mhr43hca_1_4.jpg",
+    "currency": "EUR"
+  },
+  {
+    "id": 9,
+    "name": "Apple Studio  ",
+    "price": 5.89,
+    "imgUrl": "https://istyle.rs/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/s/t/studio_display_pdp_image_position-1__wwen_1_1_1.jpg",
+    "currency": "EUR"
   }
 ]
