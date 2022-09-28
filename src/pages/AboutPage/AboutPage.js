@@ -21,7 +21,7 @@ const About = () => {
         </svg>
       </a>
       <br />
-      <a className="btn" href="https://github.com/denismahmutovic">
+      <a className="btn " href="https://github.com/denismahmutovic ">
         {/* <img src={GithubIcon} alt="" /> */}
         View on Github
       </a>

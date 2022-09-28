@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 export default function CartPage() {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
@@ -15,7 +16,7 @@ export default function CartPage() {
   return (
     <>
       {cartItems.length === 0 ? (
-        <div className="m-auto my-24 w-4/12 flex flex-col items-center gap-8">
+        <div className="m-auto my-24 w-4/12 flex flex-col items-center gap-8 ">
           {/* <img
             src={require("../../../images/cart_empty.png")}
             alt="Logo"
@@ -33,7 +34,7 @@ export default function CartPage() {
           </button>
         </div>
       ) : (
-        <div className="flex flex-col justify-center items-center h-30 w-full px-48">
+        <div className="flex flex-col justify-center items-center h-30 w-full px-48  ">
           {cartItems.map((product) => (
             <div
               key={product.id}
@@ -124,6 +125,7 @@ export default function CartPage() {
           </div>
         </div>
       )}
+      <Footer />
     </>
   );
 }

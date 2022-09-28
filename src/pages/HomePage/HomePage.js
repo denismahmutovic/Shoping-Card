@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import products from "../../common/items.json";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
+import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
   const { addToCart } = useContext(ShoppingCartContext);
   return (
     <>
-      <div className="flex w-full justify-center mt-5  flex-row  ">
+      <div className="flex w-full justify-center mt-5  flex-row    ">
         <img
           className=" "
           src="https://www.nylon.com.sg/wp-content/uploads/2022/09/apple-fall-2022-header.png"
@@ -26,6 +27,7 @@ export default function HomePage() {
           />
         ))}
       </div>
+      <Footer />
     </>
   );
 }

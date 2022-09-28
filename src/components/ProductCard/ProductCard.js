@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ProductCard({ image, title, price, onClick }) {
   return (
-    <div className="bg-gray-100  w-1/3  mb-10 flex justify-center items-center ">
-      <div className=" w-60 h-full  px-6 bg-white rounded py-6 transform transition-all hover:translate-y-2  ">
+    <div className="bg-gray-100  w-1/3  mt-2 mb-10 flex justify-center items-center  ">
+      <div className=" w-64 h-full mt-2 px-6 bg-white rounded py-6 transform transition-all hover:translate-y-2     ">
         <img className="h-50 object-cover " src={image} alt="Product" />
         <div className="p-2"></div>
         <h2 className="font-bold text-lg ml-10"> {title} </h2>

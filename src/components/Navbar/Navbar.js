@@ -7,7 +7,7 @@ const NavBar = () => {
 
   const itemsInCart = cartItems.reduce((prev, curr) => prev + curr.quantity, 0);
   return (
-    <div className="text-white">
+    <div className="text-white ">
       <div className="flex justify-between pr-15 gap-4 p-5 bg-black font-serif  ">
         <NavLink to={"/"}>
           <img
